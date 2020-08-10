@@ -1,6 +1,6 @@
 ﻿namespace Manga_Combine
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,13 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.FBDSelectFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnSelectFolderFrom = new System.Windows.Forms.Button();
+            this.btnSelectFolderTo = new System.Windows.Forms.Button();
+            this.tbAddrFrom = new System.Windows.Forms.TextBox();
+            this.tbAddrTo = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // FBDSelectFolder
+            // 
+            this.FBDSelectFolder.ShowNewFolderButton = false;
+            // 
+            // btnSelectFolderFrom
+            // 
+            this.btnSelectFolderFrom.Location = new System.Drawing.Point(12, 12);
+            this.btnSelectFolderFrom.Name = "btnSelectFolderFrom";
+            this.btnSelectFolderFrom.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectFolderFrom.TabIndex = 0;
+            this.btnSelectFolderFrom.Text = "Откуда";
+            this.btnSelectFolderFrom.UseVisualStyleBackColor = true;
+            this.btnSelectFolderFrom.Click += new System.EventHandler(this.btnSelectFolderFrom_Click);
+            // 
+            // btnSelectFolderTo
+            // 
+            this.btnSelectFolderTo.Location = new System.Drawing.Point(12, 41);
+            this.btnSelectFolderTo.Name = "btnSelectFolderTo";
+            this.btnSelectFolderTo.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectFolderTo.TabIndex = 1;
+            this.btnSelectFolderTo.Text = "Куда";
+            this.btnSelectFolderTo.UseVisualStyleBackColor = true;
+            this.btnSelectFolderTo.Click += new System.EventHandler(this.btnSelectFolderTo_Click);
+            // 
+            // tbAddrFrom
+            // 
+            this.tbAddrFrom.Location = new System.Drawing.Point(93, 14);
+            this.tbAddrFrom.Name = "tbAddrFrom";
+            this.tbAddrFrom.Size = new System.Drawing.Size(314, 20);
+            this.tbAddrFrom.TabIndex = 2;
+            // 
+            // tbAddrTo
+            // 
+            this.tbAddrTo.Location = new System.Drawing.Point(92, 44);
+            this.tbAddrTo.Name = "tbAddrTo";
+            this.tbAddrTo.Size = new System.Drawing.Size(314, 20);
+            this.tbAddrTo.TabIndex = 3;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.tbAddrTo);
+            this.Controls.Add(this.tbAddrFrom);
+            this.Controls.Add(this.btnSelectFolderTo);
+            this.Controls.Add(this.btnSelectFolderFrom);
+            this.Name = "MainForm";
+            this.Text = "Manga_Combine";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.FolderBrowserDialog FBDSelectFolder;
+        private System.Windows.Forms.Button btnSelectFolderFrom;
+        private System.Windows.Forms.Button btnSelectFolderTo;
+        private System.Windows.Forms.TextBox tbAddrFrom;
+        private System.Windows.Forms.TextBox tbAddrTo;
     }
 }
 
