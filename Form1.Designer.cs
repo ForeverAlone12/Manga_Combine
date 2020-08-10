@@ -33,11 +33,16 @@
             this.btnSelectFolderTo = new System.Windows.Forms.Button();
             this.tbAddrFrom = new System.Windows.Forms.TextBox();
             this.tbAddrTo = new System.Windows.Forms.TextBox();
+            this.btnPrepareFolders = new System.Windows.Forms.Button();
+            this.tbVolumeName = new System.Windows.Forms.TextBox();
+            this.tbPartName = new System.Windows.Forms.TextBox();
+            this.btnGo = new System.Windows.Forms.Button();
+            this.tbCreditsName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // FBDSelectFolder
             // 
-            this.FBDSelectFolder.ShowNewFolderButton = false;
+            this.FBDSelectFolder.SelectedPath = "F:\\Desktop\\Манга\\Извращенка со вторым размером - копия";
             // 
             // btnSelectFolderFrom
             // 
@@ -61,28 +66,81 @@
             // 
             // tbAddrFrom
             // 
-            this.tbAddrFrom.Location = new System.Drawing.Point(93, 14);
+            this.tbAddrFrom.Location = new System.Drawing.Point(93, 13);
             this.tbAddrFrom.Name = "tbAddrFrom";
             this.tbAddrFrom.Size = new System.Drawing.Size(314, 20);
             this.tbAddrFrom.TabIndex = 2;
             // 
             // tbAddrTo
             // 
-            this.tbAddrTo.Location = new System.Drawing.Point(92, 44);
+            this.tbAddrTo.Location = new System.Drawing.Point(92, 42);
             this.tbAddrTo.Name = "tbAddrTo";
             this.tbAddrTo.Size = new System.Drawing.Size(314, 20);
             this.tbAddrTo.TabIndex = 3;
+            // 
+            // btnPrepareFolders
+            // 
+            this.btnPrepareFolders.Location = new System.Drawing.Point(12, 70);
+            this.btnPrepareFolders.Name = "btnPrepareFolders";
+            this.btnPrepareFolders.Size = new System.Drawing.Size(90, 23);
+            this.btnPrepareFolders.TabIndex = 4;
+            this.btnPrepareFolders.Text = "Подготовить";
+            this.btnPrepareFolders.UseVisualStyleBackColor = true;
+            this.btnPrepareFolders.Click += new System.EventHandler(this.btnPrepareFolders_Click);
+            // 
+            // tbVolumeName
+            // 
+            this.tbVolumeName.Location = new System.Drawing.Point(413, 13);
+            this.tbVolumeName.Name = "tbVolumeName";
+            this.tbVolumeName.Size = new System.Drawing.Size(100, 20);
+            this.tbVolumeName.TabIndex = 5;
+            this.tbVolumeName.Text = "Том";
+            this.tbVolumeName.TextChanged += new System.EventHandler(this.tbVolumeName_TextChanged);
+            // 
+            // tbPartName
+            // 
+            this.tbPartName.Location = new System.Drawing.Point(412, 42);
+            this.tbPartName.Name = "tbPartName";
+            this.tbPartName.Size = new System.Drawing.Size(100, 20);
+            this.tbPartName.TabIndex = 6;
+            this.tbPartName.Text = "Глава";
+            this.tbPartName.TextChanged += new System.EventHandler(this.tbPartName_TextChanged);
+            // 
+            // btnGo
+            // 
+            this.btnGo.Location = new System.Drawing.Point(12, 99);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(90, 23);
+            this.btnGo.TabIndex = 7;
+            this.btnGo.Text = "Переместить";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
+            // tbCreditsName
+            // 
+            this.tbCreditsName.Location = new System.Drawing.Point(519, 12);
+            this.tbCreditsName.Name = "tbCreditsName";
+            this.tbCreditsName.Size = new System.Drawing.Size(100, 20);
+            this.tbCreditsName.TabIndex = 8;
+            this.tbCreditsName.Text = "9999.jpg";
+            this.tbCreditsName.TextChanged += new System.EventHandler(this.tbCreditsName_TextChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbCreditsName);
+            this.Controls.Add(this.btnGo);
+            this.Controls.Add(this.tbPartName);
+            this.Controls.Add(this.tbVolumeName);
+            this.Controls.Add(this.btnPrepareFolders);
             this.Controls.Add(this.tbAddrTo);
             this.Controls.Add(this.tbAddrFrom);
             this.Controls.Add(this.btnSelectFolderTo);
             this.Controls.Add(this.btnSelectFolderFrom);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manga_Combine";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,6 +154,11 @@
         private System.Windows.Forms.Button btnSelectFolderTo;
         private System.Windows.Forms.TextBox tbAddrFrom;
         private System.Windows.Forms.TextBox tbAddrTo;
+        private System.Windows.Forms.Button btnPrepareFolders;
+        private System.Windows.Forms.TextBox tbVolumeName;
+        private System.Windows.Forms.TextBox tbPartName;
+        private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.TextBox tbCreditsName;
     }
 }
 
